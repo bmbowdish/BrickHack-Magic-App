@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet var theLabel: UILabel!
-    
+    @IBOutlet var theSlider: UISlider!
     
     /// Get a random number between two bounds. 
     func getRandom(lowerBound: UInt32, upperBound: UInt32) -> Int{
@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    // when the button is clicked
     @IBAction func buttonAClicked(){
         let goodbye: String = "Goodbye world."
         let hello: String = "Hello world."
@@ -35,6 +36,13 @@ class ViewController: UIViewController {
             theLabel.text = goodbye
             theLabel.textColor = UIColor.red
         }
+    }
+    
+    
+    @IBAction func slidebarSlid(){
+        theLabel.textColor = UIColor.blue
+        let value = Int(theSlider.value)
+        theLabel.text = "\(value)"
     }
     
     @IBAction func buttonBClicked() {
