@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F830AB592016CBB20090B223 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F830AB582016CBB20090B223 /* AppDelegate.swift */; };
-		F830AB5B2016CBB20090B223 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F830AB5A2016CBB20090B223 /* ViewController.swift */; };
+		F830AB5B2016CBB20090B223 /* DiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F830AB5A2016CBB20090B223 /* DiceViewController.swift */; };
 		F830AB5E2016CBB20090B223 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F830AB5C2016CBB20090B223 /* Main.storyboard */; };
 		F830AB602016CBB20090B223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F830AB5F2016CBB20090B223 /* Assets.xcassets */; };
 		F830AB632016CBB20090B223 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F830AB612016CBB20090B223 /* LaunchScreen.storyboard */; };
@@ -19,6 +19,8 @@
 		F830AB7C2016CBB20090B223 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F830AB7B2016CBB20090B223 /* InterfaceController.swift */; };
 		F830AB7E2016CBB20090B223 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F830AB7D2016CBB20090B223 /* ExtensionDelegate.swift */; };
 		F830AB802016CBB20090B223 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F830AB7F2016CBB20090B223 /* Assets.xcassets */; };
+		F877C72B201D2ED0005E12F1 /* CoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F877C72A201D2ED0005E12F1 /* CoinViewController.swift */; };
+		F8AEA193201D249400B176B2 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEA192201D249400B176B2 /* Random.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +68,7 @@
 /* Begin PBXFileReference section */
 		F830AB552016CBB20090B223 /* watchProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watchProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F830AB582016CBB20090B223 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F830AB5A2016CBB20090B223 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F830AB5A2016CBB20090B223 /* DiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceViewController.swift; sourceTree = "<group>"; };
 		F830AB5D2016CBB20090B223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F830AB5F2016CBB20090B223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F830AB622016CBB20090B223 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,6 +82,8 @@
 		F830AB7D2016CBB20090B223 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		F830AB7F2016CBB20090B223 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F830AB812016CBB20090B223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F877C72A201D2ED0005E12F1 /* CoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewController.swift; sourceTree = "<group>"; };
+		F8AEA192201D249400B176B2 /* Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,11 +128,13 @@
 			isa = PBXGroup;
 			children = (
 				F830AB582016CBB20090B223 /* AppDelegate.swift */,
-				F830AB5A2016CBB20090B223 /* ViewController.swift */,
+				F830AB5A2016CBB20090B223 /* DiceViewController.swift */,
 				F830AB5C2016CBB20090B223 /* Main.storyboard */,
 				F830AB5F2016CBB20090B223 /* Assets.xcassets */,
 				F830AB612016CBB20090B223 /* LaunchScreen.storyboard */,
 				F830AB642016CBB20090B223 /* Info.plist */,
+				F8AEA192201D249400B176B2 /* Random.swift */,
+				F877C72A201D2ED0005E12F1 /* CoinViewController.swift */,
 			);
 			path = watchProject;
 			sourceTree = "<group>";
@@ -289,8 +295,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F830AB5B2016CBB20090B223 /* ViewController.swift in Sources */,
+				F830AB5B2016CBB20090B223 /* DiceViewController.swift in Sources */,
 				F830AB592016CBB20090B223 /* AppDelegate.swift in Sources */,
+				F8AEA193201D249400B176B2 /* Random.swift in Sources */,
+				F877C72B201D2ED0005E12F1 /* CoinViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

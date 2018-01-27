@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BS5-64-eJf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,52 +10,92 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="Md3-Ga-K0t">
+            <objects>
+                <tabBarController id="BS5-64-eJf" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YfH-Xt-uMn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="n0M-Fk-KhI"/>
+                        <segue destination="njO-i4-8MX" kind="relationship" relationship="viewControllers" id="q60-rG-5Ji"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mbY-J1-JQt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-758" y="-672"/>
+        </scene>
+        <!--Coin Flip-->
+        <scene sceneID="nqX-yw-270">
+            <objects>
+                <viewController id="njO-i4-8MX" customClass="CoinViewController" customModule="watchProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2YE-lC-J9c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEc-ZR-Gea">
+                                <rect key="frame" x="25" y="563" width="325" height="30"/>
+                                <state key="normal" title="Flip a Coin!">
+                                    <color key="titleColor" red="1" green="0.12986122477462747" blue="0.083257280338342121" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonAClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="yqg-W5-rbf"/>
+                                    <action selector="buttonClicked" destination="njO-i4-8MX" eventType="touchUpInside" id="s5j-E6-fXW"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heads" translatesAutoresizingMaskIntoConstraints="NO" id="e93-fl-W43">
+                                <rect key="frame" x="137" y="269" width="100" height="100"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EAg-sn-Yk3" firstAttribute="bottom" secondItem="rEc-ZR-Gea" secondAttribute="bottom" constant="25" id="DKm-6f-3ZN"/>
+                            <constraint firstItem="e93-fl-W43" firstAttribute="centerY" secondItem="EAg-sn-Yk3" secondAttribute="centerY" id="QDW-zl-gXf"/>
+                            <constraint firstItem="e93-fl-W43" firstAttribute="centerX" secondItem="EAg-sn-Yk3" secondAttribute="centerX" id="fGT-cz-303"/>
+                            <constraint firstItem="rEc-ZR-Gea" firstAttribute="leading" secondItem="EAg-sn-Yk3" secondAttribute="leading" constant="25" id="kpP-kq-0e3"/>
+                            <constraint firstItem="EAg-sn-Yk3" firstAttribute="trailing" secondItem="rEc-ZR-Gea" secondAttribute="trailing" constant="25" id="yzr-bF-MFd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EAg-sn-Yk3"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Coin Flip" image="Coin flip" id="jTS-yx-Csj"/>
+                    <connections>
+                        <outlet property="button" destination="rEc-ZR-Gea" id="fkD-TH-Tkb"/>
+                        <outlet property="imageView" destination="e93-fl-W43" id="fiI-X6-WPW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gpq-lP-ZOS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="268" y="-504.19790104947532"/>
+        </scene>
+        <!--Dice-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="watchProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DiceViewController" customModule="watchProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="W1p-Vs-73q">
-                                <rect key="frame" x="30" y="60" width="315" height="160.5"/>
+                                <rect key="frame" x="30" y="60" width="315" height="100.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello world!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Enj-R6-NT1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to my Magic App!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Enj-R6-NT1">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qpu-3a-YDM">
-                                        <rect key="frame" x="0.0" y="60.5" width="315" height="30"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14E-dx-Yei">
-                                                <rect key="frame" x="0.0" y="0.0" width="157.5" height="30"/>
-                                                <state key="normal" title="Click me!">
-                                                    <color key="titleColor" red="1" green="0.12986122480000001" blue="0.083257280340000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="buttonBClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="iiY-ea-k6B"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEc-ZR-Gea">
-                                                <rect key="frame" x="157.5" y="0.0" width="157.5" height="30"/>
-                                                <state key="normal" title="Click me!">
-                                                    <color key="titleColor" red="1" green="0.12986122477462747" blue="0.083257280338342121" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="buttonAClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="yqg-W5-rbf"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="usT-tD-bDp">
-                                        <rect key="frame" x="-2" y="130.5" width="319" height="31"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14E-dx-Yei">
+                                        <rect key="frame" x="0.0" y="60.5" width="315" height="40"/>
+                                        <state key="normal" image="Dice">
+                                            <color key="titleColor" red="1" green="0.12986122480000001" blue="0.083257280340000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
-                                            <action selector="slidebarSlid" destination="BYZ-38-t0r" eventType="valueChanged" id="SjD-fI-l7R"/>
+                                            <action selector="buttonClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="mua-hl-djn"/>
                                         </connections>
-                                    </slider>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -67,14 +107,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uee-0j-aNJ"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Dice" image="Dice Tab" id="6ka-Bb-juC"/>
                     <connections>
                         <outlet property="theLabel" destination="Enj-R6-NT1" id="pYA-1K-gGk"/>
-                        <outlet property="theSlider" destination="usT-tD-bDp" id="Wbq-bI-UGQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-9" y="514"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Coin flip" width="17" height="28"/>
+        <image name="Dice" width="40" height="40"/>
+        <image name="Dice Tab" width="23" height="24"/>
+        <image name="Heads" width="100" height="100"/>
+    </resources>
 </document>
