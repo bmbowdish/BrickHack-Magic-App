@@ -11,10 +11,11 @@ import UIKit
 class CoinViewController: UIViewController {
     @IBOutlet var button: UIButton!
     @IBOutlet var imageView: UIImageView!
+    @IBOutlet var backgroundView: UIImageView!
     
     var globalPrefs: Preferences!
     
-    let colors = [UIColor.white,UIColor.black]
+    let colors = [UIColor.black]
     var pointer: Int = 0;
 
     // when the button is clicked
@@ -43,7 +44,10 @@ class CoinViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        backgroundView.isHidden = !globalPrefs.showBackground
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

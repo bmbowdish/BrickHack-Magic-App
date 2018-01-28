@@ -33,14 +33,16 @@
         <!--Settings-->
         <scene sceneID="DF5-na-mHx">
             <objects>
-                <viewController title="Settings" id="o4R-AJ-TjV" sceneMemberID="viewController">
+                <viewController title="Settings" id="o4R-AJ-TjV" customClass="SettingsViewController" customModule="watchProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gic-fw-4gU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Magic Art" translatesAutoresizingMaskIntoConstraints="NO" id="Cjn-zk-umh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Magic Art" translatesAutoresizingMaskIntoConstraints="NO" id="Cjn-zk-umh">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                </accessibility>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IaE-0V-dB9">
                                 <rect key="frame" x="50" y="70" width="275" height="228.5"/>
@@ -61,6 +63,9 @@
                                                         <subviews>
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2b0-Pl-84u">
                                                                 <rect key="frame" x="34.5" y="6.5" width="51" height="31"/>
+                                                                <connections>
+                                                                    <action selector="backgroundSettingWithSender:" destination="o4R-AJ-TjV" eventType="valueChanged" id="I1I-xy-LoZ"/>
+                                                                </connections>
                                                             </switch>
                                                         </subviews>
                                                         <constraints>
@@ -80,8 +85,15 @@
                                             <stackView opaque="NO" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zTN-Ow-BM3">
                                                 <rect key="frame" x="0.0" y="144.5" width="235" height="44"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eL8-Lf-vnQ">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbf-PV-3Kh" userLabel="Set Lifetotal">
                                                         <rect key="frame" x="0.0" y="0.0" width="117.5" height="44"/>
+                                                        <state key="normal" title="Set Life Total"/>
+                                                        <connections>
+                                                            <action selector="buttonPress" destination="o4R-AJ-TjV" eventType="touchUpInside" id="yWu-52-ezR"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eL8-Lf-vnQ">
+                                                        <rect key="frame" x="117.5" y="0.0" width="117.5" height="44"/>
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jt3-wH-fAC">
                                                                 <rect key="frame" x="10" y="6.5" width="97" height="30"/>
@@ -95,12 +107,6 @@
                                                             <constraint firstAttribute="height" constant="44" id="JoH-tS-Bp8"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starting Life Total" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLq-1T-nhE">
-                                                        <rect key="frame" x="117.5" y="0.0" width="117.5" height="44"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -118,12 +124,21 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="NKb-AR-KqP" firstAttribute="trailing" secondItem="IaE-0V-dB9" secondAttribute="trailing" constant="50" id="07W-N8-iOi"/>
+                            <constraint firstItem="Cjn-zk-umh" firstAttribute="top" secondItem="Gic-fw-4gU" secondAttribute="top" id="Ba0-4W-GWH"/>
+                            <constraint firstItem="Cjn-zk-umh" firstAttribute="trailing" secondItem="NKb-AR-KqP" secondAttribute="trailing" id="DyQ-l2-j9X"/>
+                            <constraint firstItem="Cjn-zk-umh" firstAttribute="leading" secondItem="NKb-AR-KqP" secondAttribute="leading" id="V3y-Di-DdF"/>
                             <constraint firstItem="IaE-0V-dB9" firstAttribute="top" secondItem="NKb-AR-KqP" secondAttribute="top" constant="50" id="XZT-3b-O4N"/>
+                            <constraint firstAttribute="bottom" secondItem="Cjn-zk-umh" secondAttribute="bottom" id="akM-gz-mBp"/>
                             <constraint firstItem="IaE-0V-dB9" firstAttribute="leading" secondItem="NKb-AR-KqP" secondAttribute="leading" constant="50" id="cOU-Ui-hVf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NKb-AR-KqP"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="QJ0-fK-jJL"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="Cjn-zk-umh" id="wUe-5E-x2d"/>
+                        <outlet property="lifetotal" destination="jt3-wH-fAC" id="Mxn-8i-BGd"/>
+                        <outlet property="setLifetoatl" destination="Dbf-PV-3Kh" id="buf-HR-H1d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W1M-Sq-wcC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,18 +156,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lyl-Ue-QSS">
-                                <rect key="frame" x="50" y="70" width="275" height="320.5"/>
+                                <rect key="frame" x="50" y="70" width="275" height="330"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="81D-f9-DIi">
-                                        <rect key="frame" x="0.0" y="20" width="275" height="280.5"/>
+                                        <rect key="frame" x="0.0" y="20" width="275" height="290"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Life Total Manager" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="el1-gS-cWK">
-                                                <rect key="frame" x="0.0" y="0.0" width="275" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epn-mh-jVL" userLabel="Reset">
+                                                <rect key="frame" x="0.0" y="0.0" width="275" height="30"/>
+                                                <state key="normal" title="Reset Life Totals"/>
+                                                <connections>
+                                                    <action selector="reset" destination="49i-kP-yCm" eventType="touchUpInside" id="DMH-Wc-kSC"/>
+                                                </connections>
+                                            </button>
                                             <stackView opaque="NO" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCF-6X-AGF">
-                                                <rect key="frame" x="0.0" y="60.5" width="275" height="25"/>
+                                                <rect key="frame" x="0.0" y="70" width="275" height="25"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0e-xe-q8y">
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="25"/>
@@ -183,7 +200,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eY-Jf-0d4">
-                                                <rect key="frame" x="0.0" y="125.5" width="275" height="25"/>
+                                                <rect key="frame" x="0.0" y="135" width="275" height="25"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqh-dF-cIQ">
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="25"/>
@@ -214,7 +231,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uj-4l-12L">
-                                                <rect key="frame" x="0.0" y="190.5" width="275" height="25"/>
+                                                <rect key="frame" x="0.0" y="200" width="275" height="25"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXg-Kz-hMf">
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="25"/>
@@ -245,7 +262,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eys-6u-XfQ">
-                                                <rect key="frame" x="0.0" y="255.5" width="275" height="25"/>
+                                                <rect key="frame" x="0.0" y="265" width="275" height="25"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOB-c8-tH9">
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="25"/>
@@ -301,10 +318,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Life Totals" image="Life" selectedImage="Life" id="JTY-uM-07x"/>
                     <connections>
+                        <outlet property="backgroundView" destination="S0p-2A-U4v" id="8dG-JZ-65o"/>
                         <outlet property="fourLabel" destination="aEn-Sf-cIJ" id="RXz-bb-nI3"/>
                         <outlet property="oneLabel" destination="CKw-i8-vvy" id="hM4-Y4-w8B"/>
+                        <outlet property="resetLife" destination="epn-mh-jVL" id="D97-fN-BX2"/>
                         <outlet property="threeLabel" destination="nfH-aZ-gvZ" id="Lzv-F0-0ZY"/>
-                        <outlet property="topLabel" destination="el1-gS-cWK" id="XFb-CS-jy3"/>
                         <outlet property="twoLabel" destination="eVw-Co-HPb" id="Jzm-3N-uIj"/>
                     </connections>
                 </viewController>
@@ -323,39 +341,52 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Magic Art" translatesAutoresizingMaskIntoConstraints="NO" id="aiy-CE-GGQ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEc-ZR-Gea">
-                                <rect key="frame" x="25" y="149" width="325" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Flip a Coin!">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonAClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="yqg-W5-rbf"/>
-                                    <action selector="buttonClicked" destination="njO-i4-8MX" eventType="touchUpInside" id="s5j-E6-fXW"/>
-                                </connections>
-                            </button>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heads" translatesAutoresizingMaskIntoConstraints="NO" id="e93-fl-W43">
-                                <rect key="frame" x="100" y="50" width="175" height="100"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ftp-LX-ixd">
+                                <rect key="frame" x="60" y="45" width="255" height="180"/>
+                                <subviews>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heads" translatesAutoresizingMaskIntoConstraints="NO" id="e93-fl-W43">
+                                        <rect key="frame" x="40" y="30" width="175" height="100"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEc-ZR-Gea">
+                                        <rect key="frame" x="0.0" y="138" width="255" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Flip a Coin!">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonAClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="yqg-W5-rbf"/>
+                                            <action selector="buttonClicked" destination="njO-i4-8MX" eventType="touchUpInside" id="s5j-E6-fXW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.6569377200704225" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="e93-fl-W43" firstAttribute="top" secondItem="ftp-LX-ixd" secondAttribute="top" constant="30" id="CoW-RS-YFc"/>
+                                    <constraint firstAttribute="bottom" secondItem="rEc-ZR-Gea" secondAttribute="bottom" id="CsM-k4-8Ad"/>
+                                    <constraint firstItem="e93-fl-W43" firstAttribute="leading" secondItem="ftp-LX-ixd" secondAttribute="leading" constant="40" id="G9N-ae-bHJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="e93-fl-W43" secondAttribute="trailing" constant="40" id="M71-bf-edl"/>
+                                    <constraint firstAttribute="bottom" secondItem="rEc-ZR-Gea" secondAttribute="bottom" id="Nsb-Wp-sC1"/>
+                                    <constraint firstItem="rEc-ZR-Gea" firstAttribute="leading" secondItem="ftp-LX-ixd" secondAttribute="leading" id="ShB-VW-XSO"/>
+                                    <constraint firstAttribute="trailing" secondItem="rEc-ZR-Gea" secondAttribute="trailing" id="dqd-mT-lHG"/>
+                                    <constraint firstAttribute="bottom" secondItem="e93-fl-W43" secondAttribute="bottom" constant="50" id="fjA-71-FAK"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="e93-fl-W43" firstAttribute="leading" secondItem="EAg-sn-Yk3" secondAttribute="leading" constant="100" id="050-nF-832"/>
-                            <constraint firstItem="EAg-sn-Yk3" firstAttribute="trailing" secondItem="e93-fl-W43" secondAttribute="trailing" constant="100" id="GCD-xE-lpX"/>
+                            <constraint firstItem="ftp-LX-ixd" firstAttribute="leading" secondItem="EAg-sn-Yk3" secondAttribute="leading" constant="60" id="BOP-6V-O1A"/>
+                            <constraint firstItem="EAg-sn-Yk3" firstAttribute="trailing" secondItem="ftp-LX-ixd" secondAttribute="trailing" constant="60" id="CQu-mD-hyZ"/>
                             <constraint firstAttribute="bottom" secondItem="aiy-CE-GGQ" secondAttribute="bottom" id="Kjx-U4-pcB"/>
                             <constraint firstItem="aiy-CE-GGQ" firstAttribute="top" secondItem="2YE-lC-J9c" secondAttribute="top" id="T0g-QB-kpB"/>
                             <constraint firstItem="aiy-CE-GGQ" firstAttribute="trailing" secondItem="EAg-sn-Yk3" secondAttribute="trailing" id="UXh-zp-MwI"/>
-                            <constraint firstItem="e93-fl-W43" firstAttribute="centerX" secondItem="EAg-sn-Yk3" secondAttribute="centerX" id="fGT-cz-303"/>
                             <constraint firstItem="aiy-CE-GGQ" firstAttribute="leading" secondItem="EAg-sn-Yk3" secondAttribute="leading" id="gP4-am-otw"/>
-                            <constraint firstItem="rEc-ZR-Gea" firstAttribute="leading" secondItem="EAg-sn-Yk3" secondAttribute="leading" constant="25" id="kpP-kq-0e3"/>
-                            <constraint firstItem="e93-fl-W43" firstAttribute="top" secondItem="EAg-sn-Yk3" secondAttribute="top" constant="30" id="rem-4b-Ju1"/>
-                            <constraint firstItem="EAg-sn-Yk3" firstAttribute="trailing" secondItem="rEc-ZR-Gea" secondAttribute="trailing" constant="25" id="yzr-bF-MFd"/>
-                            <constraint firstItem="EAg-sn-Yk3" firstAttribute="bottom" secondItem="rEc-ZR-Gea" secondAttribute="bottom" constant="427" id="z6K-tU-XZX"/>
+                            <constraint firstItem="ftp-LX-ixd" firstAttribute="top" secondItem="EAg-sn-Yk3" secondAttribute="top" constant="25" id="m15-He-dB5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EAg-sn-Yk3"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Coin Flip" image="Coin flip" id="jTS-yx-Csj"/>
                     <connections>
+                        <outlet property="backgroundView" destination="aiy-CE-GGQ" id="iXX-jg-P09"/>
                         <outlet property="button" destination="rEc-ZR-Gea" id="fkD-TH-Tkb"/>
                         <outlet property="imageView" destination="e93-fl-W43" id="fiI-X6-WPW"/>
                     </connections>
@@ -375,55 +406,69 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Magic Art" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZBD-bM-oM6">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="W1p-Vs-73q">
-                                <rect key="frame" x="30" y="60" width="315" height="264.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWw-gd-Rt0">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to my Magic app!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH8-zm-z6s">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14E-dx-Yei">
-                                        <rect key="frame" x="0.0" y="60.5" width="315" height="40"/>
-                                        <state key="normal" image="Dice">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="diceSixClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hcd-Mb-Zrj"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9S-KG-NlN">
-                                        <rect key="frame" x="0.0" y="140.5" width="315" height="45"/>
-                                        <state key="normal" image="Dice 20"/>
-                                        <connections>
-                                            <action selector="diceTwentyClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="ct8-YV-nXo"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29W-C8-MLt">
-                                        <rect key="frame" x="0.0" y="225.5" width="315" height="39"/>
-                                        <state key="normal" image="Two Dice 6"/>
-                                        <connections>
-                                            <action selector="twoDiceSixClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="pqo-3p-as6"/>
-                                        </connections>
-                                    </button>
+                                    <stackView contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="W1p-Vs-73q">
+                                        <rect key="frame" x="30" y="20" width="315" height="264.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to my Magic app!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH8-zm-z6s">
+                                                <rect key="frame" x="0.0" y="0.0" width="315" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14E-dx-Yei">
+                                                <rect key="frame" x="0.0" y="60.5" width="315" height="40"/>
+                                                <state key="normal" image="Dice">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="diceSixClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hcd-Mb-Zrj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9S-KG-NlN">
+                                                <rect key="frame" x="0.0" y="140.5" width="315" height="45"/>
+                                                <state key="normal" image="Dice 20"/>
+                                                <connections>
+                                                    <action selector="diceTwentyClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="ct8-YV-nXo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29W-C8-MLt">
+                                                <rect key="frame" x="0.0" y="225.5" width="315" height="39"/>
+                                                <state key="normal" image="Two Dice 6"/>
+                                                <connections>
+                                                    <action selector="twoDiceSixClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="pqo-3p-as6"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="W1p-Vs-73q" firstAttribute="top" secondItem="IWw-gd-Rt0" secondAttribute="top" constant="20" id="OyX-Vb-qMo"/>
+                                    <constraint firstItem="W1p-Vs-73q" firstAttribute="leading" secondItem="IWw-gd-Rt0" secondAttribute="leading" constant="30" id="hXv-1l-Pmx"/>
+                                    <constraint firstAttribute="trailing" secondItem="W1p-Vs-73q" secondAttribute="trailing" constant="30" id="v9o-Qw-z8q"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Uee-0j-aNJ" firstAttribute="trailing" secondItem="W1p-Vs-73q" secondAttribute="trailing" constant="30" id="13x-QI-9zq"/>
-                            <constraint firstItem="W1p-Vs-73q" firstAttribute="top" secondItem="Uee-0j-aNJ" secondAttribute="top" constant="40" id="3Xr-0F-EOk"/>
+                            <constraint firstItem="IWw-gd-Rt0" firstAttribute="top" secondItem="Uee-0j-aNJ" secondAttribute="top" id="2K3-z4-dX3"/>
+                            <constraint firstItem="IWw-gd-Rt0" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" id="4O7-AE-vPM"/>
+                            <constraint firstItem="Uee-0j-aNJ" firstAttribute="trailing" secondItem="IWw-gd-Rt0" secondAttribute="trailing" id="8hB-qg-oN6"/>
                             <constraint firstItem="ZBD-bM-oM6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9C4-78-uFD"/>
-                            <constraint firstItem="Uee-0j-aNJ" firstAttribute="leading" secondItem="W1p-Vs-73q" secondAttribute="leading" constant="-30" id="ELl-8O-Wg1"/>
                             <constraint firstItem="ZBD-bM-oM6" firstAttribute="trailing" secondItem="Uee-0j-aNJ" secondAttribute="trailing" id="Op3-PC-Bcx"/>
                             <constraint firstItem="ZBD-bM-oM6" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" id="SjN-Ec-Edi"/>
                             <constraint firstAttribute="bottom" secondItem="ZBD-bM-oM6" secondAttribute="bottom" id="SqZ-wn-GYx"/>
+                            <constraint firstItem="Uee-0j-aNJ" firstAttribute="bottom" secondItem="IWw-gd-Rt0" secondAttribute="bottom" id="baA-78-Kg2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uee-0j-aNJ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dice" image="Dice Tab" id="6ka-Bb-juC"/>
                     <connections>
+                        <outlet property="backgroundView" destination="ZBD-bM-oM6" id="4RL-jT-Tkz"/>
                         <outlet property="diceSix" destination="14E-dx-Yei" id="MFH-0r-biL"/>
                         <outlet property="diceTwenty" destination="e9S-KG-NlN" id="0nv-Gr-Nlw"/>
                         <outlet property="theLabel" destination="hH8-zm-z6s" id="3tm-NA-MSh"/>

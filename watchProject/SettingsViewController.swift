@@ -10,18 +10,30 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet var backgroundView: UIImageView!
+    @IBOutlet var setLifetoatl: UIButton!
+    @IBOutlet weak var lifetotal: UITextField!
+    
     var globalPrefs: Preferences!
     
     @IBAction func backgroundSetting(sender: UISwitch){
-            sender.isOn = globalPrefs.showBackground
+        globalPrefs.showBackground = sender.isOn
     }
     
-    
+    @IBAction func buttonPress(){
+        globalPrefs.defaultLifetotal = Int(lifetotal.text!)!
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        backgroundView?.isHidden = !globalPrefs.showBackground
     }
 
     override func didReceiveMemoryWarning() {

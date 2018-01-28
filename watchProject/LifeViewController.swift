@@ -10,13 +10,15 @@ import UIKit
 
 class LifeViewController: UIViewController {
 
-    @IBOutlet var topLabel: UILabel!
+    @IBOutlet var resetLife: UIButton!
     
     @IBOutlet var oneLabel: UILabel!
     @IBOutlet var twoLabel: UILabel!
     @IBOutlet var threeLabel: UILabel!
     @IBOutlet var fourLabel: UILabel!
+    @IBOutlet var backgroundView: UIImageView!
     
+    var currentDefaultLifetotal: Int = 20
     var globalPrefs: Preferences!
     
     var allLabels: [UILabel] {
@@ -24,9 +26,14 @@ class LifeViewController: UIViewController {
     }
     
     func setupLife(){
+        currentDefaultLifetotal = globalPrefs.defaultLifetotal
         for label in allLabels {
-            label.text = "\(globalPrefs.defaultLifetotal)"
+            label.text = "\(currentDefaultLifetotal)"
         }
+    }
+    
+    @IBAction func reset(){
+        setupLife()
     }
     
     @IBAction func uptickLife(sender: UIButton){
@@ -52,6 +59,13 @@ class LifeViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupLife()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        backgroundView.isHidden = !globalPrefs.showBackground
+        if (globalPrefs.defaultLifetotal == currentDefaultLifetotal) {}
+            else { setupLife() }
     }
 
     override func didReceiveMemoryWarning() {
