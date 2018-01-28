@@ -1,5 +1,5 @@
 //
-//  CoinViewController.swift
+//  SettingsViewController.swift
 //  watchProject
 //
 //  Created by Braden Bowdish on 1/27/18.
@@ -8,39 +8,19 @@
 
 import UIKit
 
-class CoinViewController: UIViewController {
-    @IBOutlet var button: UIButton!
-    @IBOutlet var imageView: UIImageView!
-    
+class SettingsViewController: UIViewController {
+
     var globalPrefs: Preferences!
     
-    let colors = [UIColor.white,UIColor.black]
-    var pointer: Int = 0;
-
-    // when the button is clicked
-    @IBAction func buttonClicked(){
-        
-        let coin = getRandomBool()
-        if (coin == true){
-            imageView.image = #imageLiteral(resourceName: "Tails")
-        }
-        else {
-            imageView.image = #imageLiteral(resourceName: "Heads")
-        }
-        
-        button.setTitleColor(colors[pointer], for: UIControlState.normal)
-        pointer = pointer + 1
-        if pointer > colors.count - 1 {
-            pointer = 0
-        }
-        
-        imageView.isHidden = false
-        
+    @IBAction func backgroundSetting(sender: UISwitch){
+            sender.isOn = globalPrefs.showBackground
     }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
     }
 

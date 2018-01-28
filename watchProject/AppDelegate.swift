@@ -16,6 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let tabBarController = window?.rootViewController as! UITabBarController
+        let diceVC = tabBarController.viewControllers![0] as! DiceViewController
+        let coinVC = tabBarController.viewControllers![1] as! CoinViewController
+        let lifeVC = tabBarController.viewControllers![2] as! LifeViewController
+        let settingsVC = tabBarController.viewControllers![3] as! SettingsViewController
+        
+        let globalPrefs = Preferences()
+        settingsVC.globalPrefs = globalPrefs
+        diceVC.globalPrefs = globalPrefs
+        lifeVC.globalPrefs = globalPrefs
+        coinVC.globalPrefs = globalPrefs
         return true
     }
 
