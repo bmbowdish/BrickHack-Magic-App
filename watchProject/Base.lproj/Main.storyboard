@@ -133,7 +133,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NKb-AR-KqP"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="QJ0-fK-jJL"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Cog" selectedImage="Cog" id="QJ0-fK-jJL"/>
                     <connections>
                         <outlet property="backgroundView" destination="Cjn-zk-umh" id="wUe-5E-x2d"/>
                         <outlet property="lifetotal" destination="jt3-wH-fAC" id="Mxn-8i-BGd"/>
@@ -482,6 +482,7 @@
     </scenes>
     <resources>
         <image name="Add" width="25" height="25"/>
+        <image name="Cog" width="18" height="19"/>
         <image name="Coin flip" width="17" height="28"/>
         <image name="Dice" width="40" height="40"/>
         <image name="Dice 20" width="40" height="45"/>
