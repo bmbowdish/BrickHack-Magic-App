@@ -128,13 +128,13 @@
 			isa = PBXGroup;
 			children = (
 				F830AB582016CBB20090B223 /* AppDelegate.swift */,
+				F877C72A201D2ED0005E12F1 /* CoinViewController.swift */,
 				F830AB5A2016CBB20090B223 /* DiceViewController.swift */,
 				F830AB5C2016CBB20090B223 /* Main.storyboard */,
 				F830AB5F2016CBB20090B223 /* Assets.xcassets */,
 				F830AB612016CBB20090B223 /* LaunchScreen.storyboard */,
 				F830AB642016CBB20090B223 /* Info.plist */,
 				F8AEA192201D249400B176B2 /* Random.swift */,
-				F877C72A201D2ED0005E12F1 /* CoinViewController.swift */,
 			);
 			path = watchProject;
 			sourceTree = "<group>";
