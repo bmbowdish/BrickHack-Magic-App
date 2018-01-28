@@ -12,8 +12,8 @@ class CoinViewController: UIViewController {
     @IBOutlet var button: UIButton!
     @IBOutlet var imageView: UIImageView!
     
-    let colors = [UIColor.red,UIColor.black,UIColor.blue,UIColor.green]
-    var pointer: Int = 1;
+    let colors = [UIColor.white,UIColor.black]
+    var pointer: Int = 0;
 
     // when the button is clicked
     @IBAction func buttonClicked(){
@@ -30,7 +30,7 @@ class CoinViewController: UIViewController {
         
         button.setTitleColor(colors[pointer], for: UIControlState.normal)
         pointer = pointer + 1
-        if pointer > 3 {
+        if pointer > colors.count {
             pointer = 0
         }
     }

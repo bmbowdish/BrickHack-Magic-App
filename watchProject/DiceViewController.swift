@@ -13,6 +13,7 @@ class DiceViewController: UIViewController {
     @IBOutlet var theLabel: UILabel!
     @IBOutlet var diceSix: UIButton!
     @IBOutlet var diceTwenty: UIButton!
+    @IBOutlet var twoDiceSix: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,14 +22,15 @@ class DiceViewController: UIViewController {
     
     @IBAction func diceSixClicked() {
         theLabel.text = "You rolled a D6 which landed on \(getRandom(lowerBound: 1, upperBound: 6))!"
-        theLabel.textColor = UIColor.black
     }
     
     @IBAction func diceTwentyClicked(){
         theLabel.text = "You rolled a D20 which landed on \(getRandom(lowerBound: 1, upperBound: 20))!"
-        theLabel.textColor = UIColor.black
     }
     
+    @IBAction func twoDiceSixClicked(){
+        theLabel.text = "You rolled two D6: \(getRandom(lowerBound: 1, upperBound: 6)) and \(getRandom(lowerBound: 1, upperBound: 6))!"
+    }
     
     
     override func didReceiveMemoryWarning() {

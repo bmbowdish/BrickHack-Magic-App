@@ -36,27 +36,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Magic Art" translatesAutoresizingMaskIntoConstraints="NO" id="aiy-CE-GGQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEc-ZR-Gea">
-                                <rect key="frame" x="25" y="563" width="325" height="30"/>
+                                <rect key="frame" x="25" y="149" width="325" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Flip a Coin!">
-                                    <color key="titleColor" red="1" green="0.12986122477462747" blue="0.083257280338342121" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
                                     <action selector="buttonAClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="yqg-W5-rbf"/>
                                     <action selector="buttonClicked" destination="njO-i4-8MX" eventType="touchUpInside" id="s5j-E6-fXW"/>
                                 </connections>
                             </button>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heads" translatesAutoresizingMaskIntoConstraints="NO" id="e93-fl-W43">
-                                <rect key="frame" x="137" y="269" width="100" height="100"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heads" translatesAutoresizingMaskIntoConstraints="NO" id="e93-fl-W43">
+                                <rect key="frame" x="100" y="45" width="175" height="100"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="EAg-sn-Yk3" firstAttribute="bottom" secondItem="rEc-ZR-Gea" secondAttribute="bottom" constant="25" id="DKm-6f-3ZN"/>
-                            <constraint firstItem="e93-fl-W43" firstAttribute="centerY" secondItem="EAg-sn-Yk3" secondAttribute="centerY" id="QDW-zl-gXf"/>
+                            <constraint firstItem="e93-fl-W43" firstAttribute="leading" secondItem="EAg-sn-Yk3" secondAttribute="leading" constant="100" id="050-nF-832"/>
+                            <constraint firstItem="e93-fl-W43" firstAttribute="top" secondItem="EAg-sn-Yk3" secondAttribute="top" constant="25" id="4wf-SZ-a9A"/>
+                            <constraint firstItem="EAg-sn-Yk3" firstAttribute="trailing" secondItem="e93-fl-W43" secondAttribute="trailing" constant="100" id="GCD-xE-lpX"/>
+                            <constraint firstAttribute="bottom" secondItem="aiy-CE-GGQ" secondAttribute="bottom" id="Kjx-U4-pcB"/>
+                            <constraint firstItem="aiy-CE-GGQ" firstAttribute="top" secondItem="2YE-lC-J9c" secondAttribute="top" id="T0g-QB-kpB"/>
+                            <constraint firstItem="aiy-CE-GGQ" firstAttribute="trailing" secondItem="EAg-sn-Yk3" secondAttribute="trailing" id="UXh-zp-MwI"/>
                             <constraint firstItem="e93-fl-W43" firstAttribute="centerX" secondItem="EAg-sn-Yk3" secondAttribute="centerX" id="fGT-cz-303"/>
+                            <constraint firstItem="aiy-CE-GGQ" firstAttribute="leading" secondItem="EAg-sn-Yk3" secondAttribute="leading" id="gP4-am-otw"/>
                             <constraint firstItem="rEc-ZR-Gea" firstAttribute="leading" secondItem="EAg-sn-Yk3" secondAttribute="leading" constant="25" id="kpP-kq-0e3"/>
                             <constraint firstItem="EAg-sn-Yk3" firstAttribute="trailing" secondItem="rEc-ZR-Gea" secondAttribute="trailing" constant="25" id="yzr-bF-MFd"/>
+                            <constraint firstItem="EAg-sn-Yk3" firstAttribute="bottom" secondItem="rEc-ZR-Gea" secondAttribute="bottom" constant="427" id="z6K-tU-XZX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EAg-sn-Yk3"/>
                     </view>
@@ -78,13 +88,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Magic Art" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZBD-bM-oM6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="W1p-Vs-73q">
-                                <rect key="frame" x="30" y="60" width="315" height="185.5"/>
+                                <rect key="frame" x="30" y="60" width="315" height="264.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to my Magic App!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Enj-R6-NT1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to my Magic app!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH8-zm-z6s">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14E-dx-Yei">
@@ -103,6 +116,13 @@
                                             <action selector="diceTwentyClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="ct8-YV-nXo"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29W-C8-MLt">
+                                        <rect key="frame" x="0.0" y="225.5" width="315" height="39"/>
+                                        <state key="normal" image="Two Dice 6"/>
+                                        <connections>
+                                            <action selector="twoDiceSixClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="pqo-3p-as6"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -110,7 +130,11 @@
                         <constraints>
                             <constraint firstItem="Uee-0j-aNJ" firstAttribute="trailing" secondItem="W1p-Vs-73q" secondAttribute="trailing" constant="30" id="13x-QI-9zq"/>
                             <constraint firstItem="W1p-Vs-73q" firstAttribute="top" secondItem="Uee-0j-aNJ" secondAttribute="top" constant="40" id="3Xr-0F-EOk"/>
+                            <constraint firstItem="ZBD-bM-oM6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9C4-78-uFD"/>
                             <constraint firstItem="Uee-0j-aNJ" firstAttribute="leading" secondItem="W1p-Vs-73q" secondAttribute="leading" constant="-30" id="ELl-8O-Wg1"/>
+                            <constraint firstItem="ZBD-bM-oM6" firstAttribute="trailing" secondItem="Uee-0j-aNJ" secondAttribute="trailing" id="Op3-PC-Bcx"/>
+                            <constraint firstItem="ZBD-bM-oM6" firstAttribute="leading" secondItem="Uee-0j-aNJ" secondAttribute="leading" id="SjN-Ec-Edi"/>
+                            <constraint firstAttribute="bottom" secondItem="ZBD-bM-oM6" secondAttribute="bottom" id="SqZ-wn-GYx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uee-0j-aNJ"/>
                     </view>
@@ -118,12 +142,13 @@
                     <connections>
                         <outlet property="diceSix" destination="14E-dx-Yei" id="MFH-0r-biL"/>
                         <outlet property="diceTwenty" destination="e9S-KG-NlN" id="0nv-Gr-Nlw"/>
-                        <outlet property="theLabel" destination="Enj-R6-NT1" id="pYA-1K-gGk"/>
+                        <outlet property="theLabel" destination="hH8-zm-z6s" id="3tm-NA-MSh"/>
+                        <outlet property="twoDiceSix" destination="29W-C8-MLt" id="yZR-IM-OCB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-9" y="514"/>
+            <point key="canvasLocation" x="-10.4" y="513.19340329835086"/>
         </scene>
     </scenes>
     <resources>
@@ -132,5 +157,7 @@
         <image name="Dice 20" width="40" height="45"/>
         <image name="Dice Tab" width="23" height="24"/>
         <image name="Heads" width="100" height="100"/>
+        <image name="Magic Art" width="640" height="852"/>
+        <image name="Two Dice 6" width="40" height="39"/>
     </resources>
 </document>
