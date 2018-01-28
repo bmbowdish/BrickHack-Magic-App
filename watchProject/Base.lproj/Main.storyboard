@@ -79,7 +79,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="W1p-Vs-73q">
-                                <rect key="frame" x="30" y="60" width="315" height="100.5"/>
+                                <rect key="frame" x="30" y="60" width="315" height="185.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to my Magic App!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Enj-R6-NT1">
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="20.5"/>
@@ -90,10 +90,17 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14E-dx-Yei">
                                         <rect key="frame" x="0.0" y="60.5" width="315" height="40"/>
                                         <state key="normal" image="Dice">
-                                            <color key="titleColor" red="1" green="0.12986122480000001" blue="0.083257280340000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="buttonClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="mua-hl-djn"/>
+                                            <action selector="diceSixClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hcd-Mb-Zrj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9S-KG-NlN">
+                                        <rect key="frame" x="0.0" y="140.5" width="315" height="45"/>
+                                        <state key="normal" image="Dice 20"/>
+                                        <connections>
+                                            <action selector="diceTwentyClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="ct8-YV-nXo"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -109,6 +116,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Dice" image="Dice Tab" id="6ka-Bb-juC"/>
                     <connections>
+                        <outlet property="diceSix" destination="14E-dx-Yei" id="MFH-0r-biL"/>
+                        <outlet property="diceTwenty" destination="e9S-KG-NlN" id="0nv-Gr-Nlw"/>
                         <outlet property="theLabel" destination="Enj-R6-NT1" id="pYA-1K-gGk"/>
                     </connections>
                 </viewController>
@@ -120,6 +129,7 @@
     <resources>
         <image name="Coin flip" width="17" height="28"/>
         <image name="Dice" width="40" height="40"/>
+        <image name="Dice 20" width="40" height="45"/>
         <image name="Dice Tab" width="23" height="24"/>
         <image name="Heads" width="100" height="100"/>
     </resources>
