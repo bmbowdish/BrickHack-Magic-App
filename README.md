@@ -32,8 +32,8 @@ Control the lifetoal of four players
 
 * When the app opens, 4 players are set to the default lifetotal 
 * Each players life total can be controlled with 2 buttons
-** Plus (+) button raises health by one point
-** Minues (-) button removes a point of health
+ * Plus (+) button raises health by one point
+ * Minues (-) button removes a point of health
 * If the number is less than zero, text becomes red 
 
 ### Settings 
