@@ -76,7 +76,7 @@
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Background Image" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGN-bJ-82r">
                                                         <rect key="frame" x="117.5" y="0.0" width="117.5" height="44"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -87,6 +87,7 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbf-PV-3Kh" userLabel="Set Lifetotal">
                                                         <rect key="frame" x="0.0" y="0.0" width="117.5" height="44"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                                         <state key="normal" title="Set Life Total"/>
                                                         <connections>
                                                             <action selector="buttonPress" destination="o4R-AJ-TjV" eventType="touchUpInside" id="yWu-52-ezR"/>
@@ -183,7 +184,7 @@
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKw-i8-vvy">
                                                         <rect key="frame" x="100" y="0.0" width="75" height="25"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -214,7 +215,7 @@
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVw-Co-HPb">
                                                         <rect key="frame" x="100" y="0.0" width="75" height="25"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -245,7 +246,7 @@
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfH-aZ-gvZ">
                                                         <rect key="frame" x="100" y="0.0" width="75" height="25"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -276,7 +277,7 @@
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEn-Sf-cIJ">
                                                         <rect key="frame" x="100" y="0.0" width="75" height="25"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -349,7 +350,7 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEc-ZR-Gea">
                                         <rect key="frame" x="0.0" y="138" width="255" height="42"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                         <state key="normal" title="Flip a Coin!">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
@@ -414,7 +415,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to my Magic app!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH8-zm-z6s">
                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
