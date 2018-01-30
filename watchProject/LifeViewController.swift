@@ -39,18 +39,27 @@ class LifeViewController: UIViewController {
     @IBAction func uptickLife(sender: UIButton){
         let lifeLabel = allLabels[sender.tag]
         guard let text = lifeLabel.text,
-              let intValue = Int(text) else {
+              var intValue = Int(text) else {
             return
         }
-        lifeLabel.text = "\(intValue + 1)"
+        intValue = intValue + 1
+        lifeLabel.text = "\(intValue)"
+        
+        if (intValue >= 0){
+            lifeLabel.textColor = UIColor.black
+        }
     }
     
     @IBAction func decreaseLife(sender: UIButton){
         let lifeLabel = allLabels[sender.tag]
-        guard let text = lifeLabel.text, let intValue = Int(text) else {
+        guard let text = lifeLabel.text, var intValue = Int(text) else {
             return
         }
-        lifeLabel.text = "\(intValue - 1)"
+        intValue = intValue - 1
+        lifeLabel.text = "\(intValue)"
+        if intValue < 0 {
+            lifeLabel.textColor = UIColor.red
+        }
     }
     
     override func viewDidLoad() {
