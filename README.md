@@ -64,3 +64,11 @@ The label at the top is set to a random number as if a twenty sided dice was rol
 ### Coin
 
 The label at the top is set to a random number as if a coin was flipped. 
+
+
+## Photos 
+![alt text](https://www.csh.rit.edu/~bmbowdish/MagicApp/both.png)
+![alt text](https://www.csh.rit.edu/~bmbowdish/MagicApp/dice.png)
+![alt text](https://www.csh.rit.edu/~bmbowdish/MagicApp/coinflip.png)
+![alt text](https://www.csh.rit.edu/~bmbowdish/MagicApp/lifetotalmanager.png)
+![alt text](https://www.csh.rit.edu/~bmbowdish/MagicApp/settings.png)
