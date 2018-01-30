@@ -23,7 +23,7 @@
 		F877C72D201D6944005E12F1 /* LifeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F877C72C201D6943005E12F1 /* LifeViewController.swift */; };
 		F877C72F201D8C5A005E12F1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F877C72E201D8C5A005E12F1 /* SettingsViewController.swift */; };
 		F877C731201D8D48005E12F1 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = F877C730201D8D48005E12F1 /* Preferences.swift */; };
-		F8AEA193201D249400B176B2 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEA192201D249400B176B2 /* Random.swift */; };
+		F8A0D8092021119B00E463EB /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AEA192201D249400B176B2 /* Random.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -308,9 +308,9 @@
 				F877C731201D8D48005E12F1 /* Preferences.swift in Sources */,
 				F830AB5B2016CBB20090B223 /* DiceViewController.swift in Sources */,
 				F830AB592016CBB20090B223 /* AppDelegate.swift in Sources */,
-				F8AEA193201D249400B176B2 /* Random.swift in Sources */,
 				F877C72B201D2ED0005E12F1 /* CoinViewController.swift in Sources */,
 				F877C72F201D8C5A005E12F1 /* SettingsViewController.swift in Sources */,
+				F8A0D8092021119B00E463EB /* Random.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

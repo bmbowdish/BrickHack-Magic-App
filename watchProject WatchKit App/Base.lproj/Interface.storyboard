@@ -14,11 +14,32 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="watchProject_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <table alignment="left" id="rjf-5K-fzP"/>
+                        <label alignment="left" text="Magic Watch App! " id="uJm-VQ-xhJ"/>
+                        <button width="1" alignment="left" title="D6" id="ZKK-c0-UAp">
+                            <connections>
+                                <action selector="diceSixButton" destination="AgC-eL-Hgc" id="KRU-5c-osh"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="D20" id="rM9-2x-y7s">
+                            <connections>
+                                <action selector="diceTwentyButton" destination="AgC-eL-Hgc" id="s3p-aS-7GD"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Coin" id="VQg-Ie-oeV">
+                            <connections>
+                                <action selector="coinButton" destination="AgC-eL-Hgc" id="NdY-JZ-435"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="coin" destination="VQg-Ie-oeV" id="nKu-vN-75n"/>
+                        <outlet property="diceSix" destination="ZKK-c0-UAp" id="TXs-XE-Bba"/>
+                        <outlet property="diceTwenty" destination="rM9-2x-y7s" id="eBN-y4-5gx"/>
+                        <outlet property="label" destination="uJm-VQ-xhJ" id="iru-m5-d4g"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="119" y="103"/>
+            <point key="canvasLocation" x="147" y="55"/>
         </scene>
     </scenes>
 </document>

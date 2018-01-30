@@ -11,7 +11,40 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
+    
+    /// Get a random number between two bounds.
+    func getRandom(lowerBound: UInt32, upperBound: UInt32) -> Int{
+        let uniformInt: UInt32 = (upperBound - lowerBound) + 1
+        return Int(arc4random_uniform(uniformInt) + lowerBound);
+    }
+    
+    // Get a random bool (true or false)
+    func getRandomBool() -> Bool {
+        return arc4random_uniform(2) == 1
+    }
 
+
+    @IBOutlet var label: WKInterfaceLabel!
+    @IBOutlet var diceSix: WKInterfaceButton!
+    @IBOutlet var diceTwenty: WKInterfaceButton!
+    @IBOutlet var coin: WKInterfaceButton!
+    
+    @IBAction func diceSixButton(){
+        label.setText("\(getRandom(lowerBound: 1, upperBound: 6))")
+    }
+    
+    @IBAction func diceTwentyButton(){
+        label.setText("\(getRandom(lowerBound: 1, upperBound: 20))")
+    }
+    
+    @IBAction func coinButton(){
+        switch getRandomBool() {
+        case true:
+            label.setText("Heads!")
+        case false:
+            label.setText("Tails!")
+        }
+    }
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
