@@ -14,7 +14,7 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="watchProject_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <table alignment="left" id="scL-PY-1cK"/>
+                        <table alignment="left" id="rjf-5K-fzP"/>
                     </items>
                 </controller>
             </objects>

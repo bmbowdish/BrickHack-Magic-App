@@ -21,7 +21,15 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func buttonPress(){
-        globalPrefs.defaultLifetotal = Int(lifetotal.text!)!
+        // globalPrefs.defaultLifetotal = Int(lifetotal.text!)!
+        
+        guard let lifetotalText = lifetotal.text,
+            let newLifetotal = Int(lifetotalText)
+        else {
+            lifetotal.text = String(globalPrefs.defaultLifetotal)
+            return
+        }
+        globalPrefs.defaultLifetotal = newLifetotal
     }
     
     override func viewDidLoad() {
