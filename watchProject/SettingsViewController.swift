@@ -18,9 +18,12 @@ class SettingsViewController: UIViewController {
     
     @IBAction func backgroundSetting(sender: UISwitch){
         globalPrefs.showBackground = sender.isOn
+        refresh()
     }
     
+    
     @IBAction func buttonPress(){
+        
         // globalPrefs.defaultLifetotal = Int(lifetotal.text!)!
         
         guard let lifetotalText = lifetotal.text,
@@ -30,13 +33,20 @@ class SettingsViewController: UIViewController {
             return
         }
         globalPrefs.defaultLifetotal = newLifetotal
+        lifetotal.resignFirstResponder()
+    }
+    
+    func refresh(){
+        self .viewDidLoad()
+        self .viewWillAppear(true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         
+        // set keyboard time to numberPad
+        lifetotal.keyboardType = UIKeyboardType.numberPad
     }
     
     override func viewWillAppear(_ animated: Bool) {

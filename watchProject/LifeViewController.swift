@@ -29,7 +29,9 @@ class LifeViewController: UIViewController {
         currentDefaultLifetotal = globalPrefs.defaultLifetotal
         for label in allLabels {
             label.text = "\(currentDefaultLifetotal)"
+            label.textColor = UIColor.black
         }
+        
     }
     
     @IBAction func reset(){
