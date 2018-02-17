@@ -29,14 +29,17 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var diceTwenty: WKInterfaceButton!
     @IBOutlet var coin: WKInterfaceButton!
     
+    // rolls a D6 and displays roll
     @IBAction func diceSixButton(){
         label.setText("\(getRandom(lowerBound: 1, upperBound: 6))")
     }
     
+    // rolls a D6 and displays roll
     @IBAction func diceTwentyButton(){
         label.setText("\(getRandom(lowerBound: 1, upperBound: 20))")
     }
     
+    // flips a coin and displays side
     @IBAction func coinButton(){
         switch getRandomBool() {
         case true:

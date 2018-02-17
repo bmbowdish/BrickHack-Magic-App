@@ -14,6 +14,7 @@ func getRandom(lowerBound: UInt32, upperBound: UInt32) -> Int{
     return Int(arc4random_uniform(uniformInt) + lowerBound);
 }
 
+// get a random bool
 func getRandomBool() -> Bool {
     return arc4random_uniform(2) == 1
 }
