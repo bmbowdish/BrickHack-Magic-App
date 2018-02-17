@@ -18,13 +18,15 @@ class LifeViewController: UIViewController {
     @IBOutlet var fourLabel: UILabel!
     @IBOutlet var backgroundView: UIImageView!
     
-    var currentDefaultLifetotal: Int = 20
+    // preferences of the user (model)
     var globalPrefs: Preferences!
-    
+   
+    var currentDefaultLifetotal: Int = 20
     var allLabels: [UILabel] {
         return [oneLabel, twoLabel, threeLabel, fourLabel]
     }
     
+    // sets the life in all labels equal to the default
     func setupLife(){
         currentDefaultLifetotal = globalPrefs.defaultLifetotal
         for label in allLabels {
@@ -34,10 +36,12 @@ class LifeViewController: UIViewController {
         
     }
     
+    // resets the life in all labels
     @IBAction func reset(){
         setupLife()
     }
     
+    // Uses tag to differentiate between labels, then increases int value by one
     @IBAction func uptickLife(sender: UIButton){
         let lifeLabel = allLabels[sender.tag]
         guard let text = lifeLabel.text,
@@ -52,6 +56,7 @@ class LifeViewController: UIViewController {
         }
     }
     
+    // Uses tag to differentiate between labels, then decreases int value by one
     @IBAction func decreaseLife(sender: UIButton){
         let lifeLabel = allLabels[sender.tag]
         guard let text = lifeLabel.text, var intValue = Int(text) else {
@@ -66,7 +71,6 @@ class LifeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         setupLife()
         
@@ -74,7 +78,9 @@ class LifeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        backgroundView.isHidden = !globalPrefs.showBackground
+        backgroundView.isHidden = !globalPrefs.showBackground // background on/off
+        
+        // only resets lifetotal if the input is different than the current one
         if (globalPrefs.defaultLifetotal == currentDefaultLifetotal) {}
             else { setupLife() }
     }

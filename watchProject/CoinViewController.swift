@@ -13,6 +13,7 @@ class CoinViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var backgroundView: UIImageView!
     
+    // preferenes of the user (model)
     var globalPrefs: Preferences!
     
     let colors = [UIColor.black]

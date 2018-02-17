@@ -14,28 +14,31 @@ class SettingsViewController: UIViewController {
     @IBOutlet var setLifetoatl: UIButton!
     @IBOutlet weak var lifetotal: UITextField!
     
+    // preferences of the user (model)
     var globalPrefs: Preferences!
     
+    // Turns the background on or off
     @IBAction func backgroundSetting(sender: UISwitch){
         globalPrefs.showBackground = sender.isOn
-        refresh()
+        refresh() // refreshes page
     }
     
     
     @IBAction func buttonPress(){
-        
-        // globalPrefs.defaultLifetotal = Int(lifetotal.text!)!
-        
+        // get current values or set values to default
         guard let lifetotalText = lifetotal.text,
             let newLifetotal = Int(lifetotalText)
         else {
             lifetotal.text = String(globalPrefs.defaultLifetotal)
             return
         }
+        // set new preference
         globalPrefs.defaultLifetotal = newLifetotal
+        // closes number pad
         lifetotal.resignFirstResponder()
     }
     
+    // function for refreshing page
     func refresh(){
         self .viewDidLoad()
         self .viewWillAppear(true)
@@ -51,7 +54,7 @@ class SettingsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        backgroundView?.isHidden = !globalPrefs.showBackground
+        backgroundView?.isHidden = !globalPrefs.showBackground // background on/off
     }
 
     override func didReceiveMemoryWarning() {

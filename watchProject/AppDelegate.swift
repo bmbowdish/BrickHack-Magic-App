@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let lifeVC = tabBarController.viewControllers![2] as! LifeViewController
         let settingsVC = tabBarController.viewControllers![3] as! SettingsViewController
         
+        // sets up a model that hold some preferences
         let globalPrefs = Preferences()
         settingsVC.globalPrefs = globalPrefs
         diceVC.globalPrefs = globalPrefs
